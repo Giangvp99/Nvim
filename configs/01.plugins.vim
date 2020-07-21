@@ -11,10 +11,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
-Plug 'chiel92/vim-autoformat'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'luochen1990/rainbow'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
+Plug 'honza/vim-snippets'
 
 call plug#end()
