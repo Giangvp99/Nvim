@@ -16,5 +16,6 @@ Plug 'luochen1990/rainbow'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
