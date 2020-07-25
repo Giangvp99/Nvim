@@ -65,5 +65,11 @@ else
     let &t_SI = "\e[5 q"
     let &t_EI = "\e[2 q"
 endif
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
+":autocmd InsertEnter * set cul
+":autocmd InsertLeave * set nocul
+"
+
+
+
+noremap > <C-w>>
+noremap < <C-w><
