@@ -121,22 +121,36 @@ let g:ale_fixers = {
   \ }
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
+let g:ale_fixers = {
+ \ 'html': ['prettier'],
+ \ 'css': ['stylelint'],
+ \}
+let g:ale_linters = {
+ \ 'html': ['htmlhint'],
+ \ 'css': ['stylelint'],
+ \}
+let g:ale_linters_explicit = 1
 
-
-"Spelunker.vim
+"rainbow
 let g:rainbow_active = 1
 
 
-"Vim-prettier
-"let g:prettier#quickfix_enable = 0
-"autocmd TextChanged,InsertLeave *.js,*.jsx,*.css,*.html PrettierAsync
+"Prettier
+"
+"command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-"Vim-snippets
+"Vim-snippets   &&&    Ultisnips
 imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+
+"let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+let g:UltiSnipsEditSplit='vertical'
 "inoremap <silent><expr> <TAB>
 "	\ pumvisible() ? coc#_select_confirm() :
 "	\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])
@@ -152,3 +166,13 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 "emmet
 "
 let g:user_emmet_leader_key=','
+
+"indentLine
+let g:indentLine_char       = '|' 
+let g:indentLine_setConceal = 0
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_setColors = 0
+let g:indentLine_color_term = 239
+
+
+
