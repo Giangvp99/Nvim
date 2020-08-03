@@ -40,42 +40,6 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-
-"if has("autocmd")
-"au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
-"au InsertEnter,InsertChange *
-"			\ if v:insertmode == 'i' |
-"			\   silent execute '!echo -ne "\e[5 q"' | redraw! |
-"			\ elseif v:insertmode == 'r' |
-"			\   silent execute '!echo -ne "\e[3 q"' | redraw! |
-"			\ endif
-"au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-"endif
-"let &t_SI = "\<esc>[5 q"
-"let &t_SR = "\<esc>[3 q"
-"let &t_EI = "\<esc>[2 q"
-"let &t_SI="\eP\e[5 q\e\\"
-"let &t_EI="\eP\e[1 q\e\\"
-"let &t_SR="\eP\e[3 q\e\\"
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
-else
-    let &t_SI = "\e[5 q"
-    let &t_EI = "\e[2 q"
-endif
-":autocmd InsertEnter * set cul
-":autocmd InsertLeave * set nocul
-"
-
-
-
 noremap > <C-w>>
 noremap < <C-w><
-
-
-
-"display tabs as characters
-"set list listchars=eol:⏎,tab:».
-"
 

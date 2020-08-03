@@ -1,51 +1,56 @@
-"NERDTree
-map <C-b> :NERDTreeToggle<CR>
-map <C-i> :NERDTreeFind<CR>
-autocmd bufenter * if (winnr("$") == 1 &&  exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+""""""""""""""""""""""""""""""""""""""""
+""""""""""""""NERDTree""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+map <C-b> :NERDTreeToggle<CR>                               
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 nmap <C-r> :NERDTreeFocus<cr>R<c-w><c-p>
 
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
 
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
-"Theme
+""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""Theme"""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
 colorscheme monokai
 set termguicolors
 
-"lightline
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
 
 
+"""""""""""""""""""""""""""""""""""""""
+""""""""""""lightline""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_powerline_fonts = 1                                                                                                         
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endi
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.dirty='⚡'
+let g:bufferline_rotate = 1
+let g:bufferline_fixed_index = -1
+let g:bufferline_echo = 0
 
-"Syntastic
+"""""""""""""""""""""""""""""""""""""""
+""""""""""Syntastic""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -55,10 +60,18 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"Tagbar
+
+
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""Tagbar""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
 
-"Coc.nvim
+
+
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""Coc.nvim""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
 			\ 'coc-snippets',
 			\ 'coc-tsserver',
@@ -104,18 +117,25 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-"Vim-floaterm
-"
-"nnoremap <A-t> :FloatermToggle<CR>
-"inoremap <A-t> <ESC>:FloatermToggle<CR>
-"tnoremap <A-t> <C-\><C-n>:FloatermToggle<CR>
+imap <C-l> <Plug>(coc-snippets-expand)
+vmap <C-j> <Plug>(coc-snippets-select)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-"OmniSharp
-"
+
+
+
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""OmniSharp"""""""""""""""""
+
 let g:OmniSharp_server_stdio = 1
 
 
-"FZF
+
+"""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""FZF""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
 	\ 'ctrl-t': 'tab split',
@@ -124,7 +144,10 @@ let g:fzf_action = {
   \ }
 
 
-"Ale
+
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""Ale'""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_fixers = {
 	\ '*' :['remove_trailing_lines', 'trim_whitespace'],
@@ -142,40 +165,19 @@ let g:ale_linters = {
  \}
 let g:ale_linters_explicit = 1
 
-"rainbow
+
+
+"""""""""""""""""""""""""""""""""""""""
+""""""""""""rainbow""""""""""""""""""""
+
 let g:rainbow_active = 1
 
 
-"Prettier
-"
-"command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-"Vim-snippets   &&&    Ultisnips
-imap <C-l> <Plug>(coc-snippets-expand)
-vmap <C-j> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
-imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
-"let g:UltiSnipsExpandTrigger='<tab>'
-"let g:UltiSnipsJumpForwardTrigger='<tab>'
-"let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-let g:UltiSnipsEditSplit='vertical'
-"inoremap <silent><expr> <TAB>
-"	\ pumvisible() ? coc#_select_confirm() :
-"	\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])
-"	\ <SID>check_back_space() ? "\<TAB>" :
-"	\ coc#refresh()
-
-
-
-
-
-
-
-"emmet
-"
+"""""""""""""""""""""""""""""""""""""""
+"""""""""""""""emmet"""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
 let g:user_emmet_leader_key=','
 
 

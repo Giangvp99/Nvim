@@ -1,11 +1,13 @@
 call plug#begin('~/.config/nvim/pluged')
 
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'                            "a file system explorer for the Vim editor
 
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
 
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -33,6 +35,7 @@ Plug 'honza/vim-snippets'
 Plug 'valloric/matchtagalways'
 Plug 'mattn/emmet-vim'
 
+""""""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
