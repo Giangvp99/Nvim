@@ -5,8 +5,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
