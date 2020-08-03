@@ -28,7 +28,7 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
-colorscheme gruvbox
+colorscheme monokai
 set termguicolors
 
 "airline
@@ -41,8 +41,15 @@ endif
 let g:airline#extensions#tabline#formatter= 'unique_tail'
 "
 
+"Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -148,8 +155,8 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 "let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+"let g:UltiSnipsJumpForwardTrigger='<tab>'
+"let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 let g:UltiSnipsEditSplit='vertical'
 "inoremap <silent><expr> <TAB>
 "	\ pumvisible() ? coc#_select_confirm() :
@@ -166,13 +173,6 @@ let g:UltiSnipsEditSplit='vertical'
 "emmet
 "
 let g:user_emmet_leader_key=','
-
-"indentLine
-let g:indentLine_char       = '|' 
-let g:indentLine_setConceal = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_setColors = 0
-let g:indentLine_color_term = 239
 
 
 

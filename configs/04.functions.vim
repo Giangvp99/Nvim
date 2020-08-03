@@ -31,9 +31,9 @@ function s:CreateTerminal()
 	set nonumber
 endfunction
 
-command! TermToggle call s:ToggleTerminal()
-nnoremap <A-t> :TermToggle <CR>
-inoremap <A-t> <ESC> :TermToggle <CR>
-tnoremap <A-t> <C-\><C-n>:TermToggle <CR>
+"command! TermToggle call s:ToggleTerminal()
+"nnoremap <A-t> :TermToggle <CR>
+"inoremap <A-t> <ESC> :TermToggle <CR>
+"tnoremap <A-t> <C-\><C-n>:TermToggle <CR>
 
 

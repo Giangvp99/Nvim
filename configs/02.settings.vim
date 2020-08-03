@@ -3,7 +3,6 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-set spell spelllang=en_us
 set encoding=UTF-8
 set mouse=a
 
@@ -76,4 +75,7 @@ noremap < <C-w><
 
 
 
+"display tabs as characters
+"set list listchars=eol:⏎,tab:».
+"
 

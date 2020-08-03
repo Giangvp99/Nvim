@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/pluged')
 Plug 'scrooloose/nerdtree'
 
 Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -10,6 +11,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'majutsushi/tagbar'
+
+Plug 'scrooloose/syntastic'
 
 Plug 'OmniSharp/omnisharp-vim'
 
@@ -27,13 +30,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 
 Plug 'honza/vim-snippets'
-Plug 'sirver/ultisnips'
-
-Plug 'yggdroot/indentline'
 
 Plug 'valloric/matchtagalways'
 Plug 'mattn/emmet-vim'
-Plug 'plasticboy/vim-markdown'
 
-Plug 'thiagoalessio/rainbow_levels.vim'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
