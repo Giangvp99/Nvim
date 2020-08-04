@@ -32,10 +32,10 @@ tnoremap <ESC> <C-\><C-n>
 
 
 
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 
 
@@ -51,6 +51,8 @@ nnoremap <A-l> <C-w>l
 
 
 
-noremap > <C-w>>
-noremap < <C-w><
+nnoremap <Right> <C-w><
+nnoremap <Left> <C-w>>
+nnoremap <Up> <C-w>-
+nnoremap <Down> <C-w>+
 
