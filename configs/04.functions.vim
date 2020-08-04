@@ -25,6 +25,7 @@ function s:OpenTerminal()
 	let s:terminal_buffer = bufnr('')
 	let s:terminal_id = win_getid()
 endfunction
+
 function s:CreateTerminal()
 	call termopen(get(g:, 'termtoggle_shell', $SHELL))
 	
