@@ -301,6 +301,12 @@ let g:fzf_action = {
 	\ 'ctrl-v': 'vsplit'
   \ }
 
+"CtrlP
+let g:ctrlp_map = '<A-/>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden = 1
+
+
 
 
 """""""""""""""""""""""""""""""""""""""

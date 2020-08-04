@@ -23,6 +23,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 
+Plug 'kien/ctrlp.vim'
+
 Plug 'w0rp/ale'
 
 Plug 'prettier/vim-prettier'
