@@ -3,25 +3,35 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-set encoding=UTF-8
-set mouse=a
 
+"Search Options
 set incsearch
 set hlsearch
 
+"User Interface Options
 set number
 set relativenumber
 set cmdheight=2
+set mouse=a
+
+"Indention Options
 set tabstop=4
-set softtabstop=0
 set shiftwidth=4
+set autoindent
+set filetype indent on
 
 set nobackup
 set noswapfile
+set history=999
 set nowrap
+set encoding=UTF-8
 
+
+"Shortcut keys
 inoremap jj <ESC>
 tnoremap <ESC> <C-\><C-n>
+
+
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -39,6 +49,8 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+
 
 noremap > <C-w>>
 noremap < <C-w><
