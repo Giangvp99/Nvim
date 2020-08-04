@@ -9,6 +9,10 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 nmap <C-r> :NERDTreeFocus<cr>R<c-w><c-p>
 
+"""""""""""""NERDTree-git"""""""""""""""
+let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
+let g:NERDTreeGitStatusConcealBrackets = 1 
+
 
 
 """"""""""""""""""""""""""""""""""""""""
