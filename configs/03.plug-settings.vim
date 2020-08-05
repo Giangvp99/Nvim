@@ -300,12 +300,10 @@ let g:fzf_action = {
 	\ 'ctrl-s': 'split',
 	\ 'ctrl-v': 'vsplit'
   \ }
-
-"CtrlP
-let g:ctrlp_map = '<A-/>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 
 
