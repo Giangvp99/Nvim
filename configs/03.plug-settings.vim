@@ -294,7 +294,7 @@ let g:OmniSharp_server_stdio = 1
 """""""""""""""""""""""""""""""""""""""
 """"""""""""""""""FZF""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
-nnoremap <C-f> :FZF<CR>
+nnoremap <C-f> :Files<CR>
 let g:fzf_action = {
 	\ 'ctrl-t': 'tab split',
 	\ 'ctrl-s': 'split',
