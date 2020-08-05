@@ -36,6 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'valloric/matchtagalways'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'digitaltoad/vim-jade' "for bug
 
 """"""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'
