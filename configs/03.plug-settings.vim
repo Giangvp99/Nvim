@@ -362,3 +362,11 @@ let g:signify_sign_show_text = 1
 " Jump though hunks
 nmap <leader>gj <plug>(signify-next-hunk)
 nmap <leader>gk <plug>(signify-prev-hunk)
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""
+"""""""""""""Javascript"""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+let g:javascript_plugin_jsdoc = 1

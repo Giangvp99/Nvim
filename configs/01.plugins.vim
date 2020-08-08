@@ -38,6 +38,8 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'digitaltoad/vim-jade' "for pug
 Plug 'pangloss/vim-javascript' "for js
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
 
 """"""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'
