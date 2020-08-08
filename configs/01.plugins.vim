@@ -10,6 +10,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'niklaas/lightline-gitdiff'
 Plug 'yggdroot/indentline'
+Plug 'maximbaz/lightline-ale'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

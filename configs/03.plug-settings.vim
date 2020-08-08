@@ -12,7 +12,6 @@ nmap <C-r> :NERDTreeFocus<cr>R<C-w><C-p>
 """""""""""""NERDTree-git"""""""""""""""
 let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
 let g:NERDTreeGitStatusUseNerdFonts = 1
-let g:NERDTreeGitStatusShowClean = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'✹',
                 \ 'Staged'    :'✚',
@@ -40,17 +39,23 @@ set termguicolors
 """""""""""""""""""""""""""""""""""""""
 """"""""""""lightline""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
+set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch','gitdiff', 'readonly', 'filename', 'modified' ], 
-	  \				[  ] ]
+      \             [ 'gitbranch', 'gitdiff', 'readonly', 'filename', 'modified' ], 
+		  \							[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ], 
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
-	  \ 'tabline': {
-      \   'left': [['buffers']],
-      \   'right': [[ 'exit' ]],
+		  \ 'tabline': {
+      \		'left': [ [ 'vim_logo', 'tabs' ] ],
+      \		'right': [ [ 'gitbranch' ],
+      \		[ 'gitstatus' ] ]
       \ },
+      \ 'separator': {'left': "", 'right': ''},
       \ 'inactive': {
       \   'left': [ [ 'filename', 'gitversion' ] ],
       \ },
@@ -60,22 +65,45 @@ let g:lightline = {
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
       \   'gitdiff': 'lightline#gitdiff#get',
-	  \ },
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+			\ },
       \ 'component_type': {
       \   'buffers': 'tabsel', 
-	  \	  'gitdiff': 'middle', 
-	  \ },
+			\	  'gitdiff': 'middle', 
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+			\ },
       \ }
 let g:lightline#gitdiff#indicator_added = '+'
 let g:lightline#gitdiff#indicator_deleted = '-'
 let g:lightline#gitdiff#indicator_modified = '~'
 let g:lightline#gitdiff#separator = ' '
+let g:lightline#ale#indicator_checking = "\uf110 "
+let g:lightline#ale#indicator_infos = "\uf129 "
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
+let g:lightline#ale#indicator_ok = "\uf00c "
+let g:lightline_buffer_git_icon = ' '
+let g:lightline_buffer_readonly_icon = ''
+
+
 
 
 """""""""""""""""""""""""""""""""""""""
 """"""""""""""Prettier"""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
 let g:prettier#config#tab_width = 2
+
+
+
+
 """""""""""""""""""""""""""""""""""""""
 """"""""""Syntastic""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
@@ -187,7 +215,6 @@ let g:ale_fixers = {
 			\ 'javascript':['eslint'],
 			\ }
 let g:ale_fix_on_save = 1
-let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {
 			\ 'html': ['prettier'],
 			\ 'css': ['stylelint'],
