@@ -6,9 +6,10 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
+Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline'
+Plug 'niklaas/lightline-gitdiff'
+Plug 'yggdroot/indentline'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
