@@ -7,7 +7,7 @@ Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
 
 Plug 'itchyny/lightline.vim'
-Plug 'mgee/lightline-bufferline'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'niklaas/lightline-gitdiff'
 Plug 'yggdroot/indentline'
 Plug 'maximbaz/lightline-ale'
