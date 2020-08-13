@@ -34,6 +34,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 
 Plug 'honza/vim-snippets'
+Plug 'epilande/vim-react-snippets'
+Plug 'SirVer/ultisnips'
 
 Plug 'valloric/matchtagalways'
 Plug 'mattn/emmet-vim'
