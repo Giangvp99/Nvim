@@ -60,7 +60,8 @@ let g:lightline = {
       \   'left': [ [ 'filename', 'gitversion' ] ],
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+			\   'filename': 'LightLineFilename'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -81,6 +82,11 @@ let g:lightline = {
       \   'linter_ok': 'right',
 			\ },
       \ }
+
+function! LightLineFilename()
+	return expand('%:h')
+endfunction
+
 let g:lightline#gitdiff#indicator_added = '+'
 let g:lightline#gitdiff#indicator_deleted = '-'
 let g:lightline#gitdiff#indicator_modified = '~'
@@ -93,7 +99,7 @@ let g:lightline#ale#indicator_ok = "\uf00c "
 let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#enable_nerdfont = 1
-let g:lightline#bufferline#filename_modifier = ':t'
+let g:lightline#bufferline#filename_modifier = ':t:r'
 let g:lightline#bufferline#modified = '✎'
 let g:lightline#bufferline#read_only = ''
 
@@ -278,3 +284,13 @@ nmap <leader>gk <plug>(signify-prev-hunk)
 """""""""""""Javascript"""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
 let g:javascript_plugin_jsdoc = 1
+
+
+
+""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""Ultisnipts"""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsExpandTrigger="<c-space>"
