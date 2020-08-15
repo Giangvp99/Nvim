@@ -36,6 +36,7 @@ Plug 'tpope/vim-surround'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
+Plug 'jvanja/vim-bootstrap4-snippets' "for bootstrap4
 
 Plug 'valloric/matchtagalways'
 Plug 'mattn/emmet-vim'
