@@ -2,7 +2,6 @@
 """"""""""""""NERDTree""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
 map <C-b> :NERDTreeToggle<CR>                               
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -294,3 +293,13 @@ let g:javascript_plugin_jsdoc = 1
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsExpandTrigger="<c-space>"
+
+
+
+""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""indentline"""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_faster = 1
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']

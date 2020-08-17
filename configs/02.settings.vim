@@ -20,8 +20,10 @@ set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 set autoindent
-set listchars=tab:\¦\ 
-set list
+set expandtab
+set cursorline
+"set listchars=tab:\¦\ 
+"set list
 
 set nobackup
 set noswapfile
