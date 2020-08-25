@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/pluged')
 
 Plug 'scrooloose/nerdtree'                            "a file system explorer for the Vim editor
 Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
