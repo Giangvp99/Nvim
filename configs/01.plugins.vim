@@ -46,6 +46,7 @@ Plug 'digitaltoad/vim-jade' "for pug
 Plug 'pangloss/vim-javascript' "for js
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 """"""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'

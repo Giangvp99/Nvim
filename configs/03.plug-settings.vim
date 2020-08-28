@@ -24,6 +24,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 
+"""""Vim-syntax-nerdtree-highlight""""""
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 """"""""""""""""""""""""""""""""""""""""
 """"""""""""""""Theme"""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
@@ -32,8 +35,7 @@ set background=dark
 highlight Normal ctermbg=None
 colorscheme monokai
 set termguicolors
-
-
+set t_Co=256
 
 """""""""""""""""""""""""""""""""""""""
 """"""""""""lightline""""""""""""""""""
@@ -303,3 +305,10 @@ let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_faster = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+
+
+""""""""""""""""""""""""""""""""""""""""
+"""""""""Javascript-Libraries"""""""""""
+""""""""""""""""""""""""""""""""""""""""
+let g:used_javascript_libs = 'React'
