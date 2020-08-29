@@ -25,6 +25,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
 
@@ -47,6 +48,9 @@ Plug 'pangloss/vim-javascript' "for js
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'othree/javascript-libraries-syntax.vim'
+
+Plug 'ianks/vim-tsx' "reactnative
+Plug 'leafgarland/typescript-vim'
 
 """"""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'
