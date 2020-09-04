@@ -45,24 +45,29 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], 
-      \             [ 'gitbranch', 'gitdiff', 'readonly', 'filename', 'modified' ], 
-		  \							[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ], 
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
+      \   'left': [ [ 'mode', 'paste' ], 
+      \             [ 'readonly', 'filename', 'modified' ] ]
       \ },
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
-			\		'right': [ [  ] ]
+			\		'right': [ [ 'gitbranch', 'gitdiff' ], 
+      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
       \ },
       \ 'separator': {'left': "", 'right': ''},
       \ 'inactive': {
-      \   'left': [ [ 'filename', 'gitversion' ] ],
+      \   'left': [ [ 'filename', 'gitversion' ] ] 
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-			\   'filename': 'LightLineFilename'
+			\   'filename': 'LightLineFilename', 
+      \   'fileformat':'LightlineFileformat', 
+      \   'filetype':'LightlineFiletype', 
+      \   'fileencoding':'LightlineFilecoding', 
+      \   'readonly':'LightlineReadOnly', 
+      \   'modified':'LightlineModified'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -84,15 +89,36 @@ let g:lightline = {
 			\ },
       \ }
 
+
 function! LightLineFilename()
 	return expand('%:h')
+endfunction
+
+function! LightlineFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! LightlineFiletype()
+  return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
+endfunction
+
+function! LightlineFilecoding()
+  return winwidth(0) > 70 ? &fileencoding : ''
+endfunction
+
+function! LightlineReadOnly()
+  return winwidth(0) < 20 ? &readonly : ''
+endfunction
+
+function! LightlineModified()
+  return winwidth(0) < 20 ? &modified : ''
 endfunction
 
 let g:lightline#gitdiff#indicator_added = '+'
 let g:lightline#gitdiff#indicator_deleted = '-'
 let g:lightline#gitdiff#indicator_modified = '~'
 let g:lightline#gitdiff#separator = ' '
-let g:lightline#ale#indicator_checking = "\uf110 "
+let g:lightline#ale#indicator_checking = "checking..."
 let g:lightline#ale#indicator_infos = "\uf129 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
@@ -325,3 +351,9 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 """""""""Javascript-Libraries"""""""""""
 """"""""""""""""""""""""""""""""""""""""
 let g:used_javascript_libs = 'React'
+
+
+""""""""""""""""""""""""""""""""""""""""
+"""""""""Vim-current-word"""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
+hi CurrentWord ctermbg=53

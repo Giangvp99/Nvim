@@ -56,4 +56,5 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
+Plug 'dominikduda/vim_current_word'
 call plug#end()

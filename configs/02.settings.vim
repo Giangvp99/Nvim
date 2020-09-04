@@ -14,6 +14,7 @@ set relativenumber
 set cmdheight=2
 set mouse=a
 set textwidth=80
+set colorcolumn=80
 
 "Indention Options
 set smartindent
