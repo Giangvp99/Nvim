@@ -1,5 +1,5 @@
 {
-	"coc.preferences.formatOnTypeFiletypes": ["css","javascript","html"],
+	"coc.preferences.formatOnTypeFiletypes": ["css","javascript","html", "vim"],
 	"html.autoClosingTags": true,
 
 
@@ -17,5 +17,6 @@
 				}
 			}
 		}
-	}
+	}, 
+  "snippets.ultisnips.enable": true
 }

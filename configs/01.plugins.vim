@@ -3,9 +3,12 @@ call plug#begin('~/.config/nvim/pluged')
 Plug 'scrooloose/nerdtree'                            "a file system explorer for the Vim editor
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'preservim/nerdcommenter'
 
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
+Plug 'jaxbot/semantic-highlight.vim'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
@@ -29,7 +32,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
 
-Plug 'prettier/vim-prettier'
+"Plug 'prettier/vim-prettier'
 
 Plug 'terryma/vim-multiple-cursors'
 
@@ -57,4 +60,14 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
 Plug 'dominikduda/vim_current_word'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Plug 'liuchengxu/vim-which-key' "which-key
+
+Plug 'kevinhwang91/rnvimr'
+
 call plug#end()
