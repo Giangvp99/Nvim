@@ -27,6 +27,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 """""Vim-syntax-nerdtree-highlight""""""
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+
+
+
 """"""""""""""""""""""""""""""""""""""""
 """"""""""""""""Theme"""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
@@ -64,12 +67,15 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
+      \   'mode':'LightLineMode',
 			\   'filename': 'LightLineFilename', 
+      \   'percent' : 'LightlinePercent',
       \   'fileformat':'LightlineFileformat', 
       \   'filetype':'LightlineFiletype', 
       \   'fileencoding':'LightlineFilecoding', 
       \   'readonly':'LightlineReadOnly', 
-      \   'modified':'LightlineModified'
+      \   'modified':'LightlineModified',
+      \   'lineinfo':'LightlineInfo'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -91,9 +97,19 @@ let g:lightline = {
 			\ },
       \ }
 
+function! LightLineInfo()
+  return LightlineVisible() ? '%3l:%-2v' : ''
+endfunction
+
+
+
+function! LightLineMode()
+  return winwidth(0) > 30 ? lightline#mode() : 'Explorer'
+endfunction
+
 
 function! LightLineFilename()
-	return expand('%:h')
+	return winwidth(0) > 30 ? expand('%:h'): ''
 endfunction
 
 function! LightlineFileformat()
@@ -109,11 +125,11 @@ function! LightlineFilecoding()
 endfunction
 
 function! LightlineReadOnly()
-  return winwidth(0) < 20 ? &readonly : ''
+  return winwidth(0) <30 ? (&readonly? '':'' ):''
 endfunction
 
 function! LightlineModified()
-  return winwidth(0) < 20 ? &modified : ''
+  return winwidth(0) <30 ? (&modified? '✎':'' ):''
 endfunction
 
 let g:lightline#gitdiff#indicator_added = '+'
@@ -173,7 +189,8 @@ let g:coc_global_extensions = [
 			\ 'coc-prettier',
 			\ 'coc-json',
 			\ 'coc-css',
-			\ 'coc-html'
+			\ 'coc-html',
+      \ 'coc-explorer'
 			\]
 
 
@@ -226,6 +243,26 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Format :call CocAction('format')
 
 
+
+
+
+
+"""""""""""Coc-Explorer""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """""""""""""""""""""""""""""""""""""""
 """""""""""""OmniSharp"""""""""""""""""
 
@@ -242,12 +279,6 @@ let g:fzf_action = {
 			\ 'ctrl-s': 'split',
 			\ 'ctrl-v': 'vsplit'
 			\ }
-command! -bang -nargs=* Rg
-			\ call fzf#vim#grep(
-			\   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-			\   fzf#vim#with_preview(), <bang>0)
-
-
 
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""""CtrlP"""""""""""""""""
@@ -290,13 +321,6 @@ highlight clear ALEWarningSign
 
 
 
-"""""""""""""""""""""""""""""""""""""""
-""""""""""""rainbow""""""""""""""""""""
-
-let g:rainbow_active = 1
-
-
-
 
 """""""""""""""""""""""""""""""""""""""
 """""""""""""""emmet"""""""""""""""""""
@@ -322,8 +346,8 @@ let g:signify_update_on_focusgained  = 0
 let g:signify_sign_show_count        = 0
 let g:signify_sign_show_text = 1
 " Jump though hunks
-nmap <leader>gj <plug>(signify-next-hunk)
-nmap <leader>gk <plug>(signify-prev-hunk)
+nmap ,gj <plug>(signify-next-hunk)
+nmap ,gk <plug>(signify-prev-hunk)
 
 
 
@@ -364,7 +388,7 @@ let g:used_javascript_libs = 'React'
 """"""""""""""""""""""""""""""""""""""""
 """""""""Vim-current-word"""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
-hi CurrentWord ctermbg=53
+hi CurrentWord ctermbg=52
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -387,7 +411,7 @@ let g:rnvimr_enable_ex = 1
 let g:rnvimr_enable_picker = 1
 
 " Disable a border for floating window
-let g:rnvimr_draw_border = 0
+let g:rnvimr_draw_border = 1
 
 " Change the border's color
 let g:rnvimr_border_attr = {'fg': 14, 'bg': -1}

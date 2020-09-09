@@ -1,52 +1,48 @@
 call plug#begin('~/.config/nvim/pluged')
 
-Plug 'scrooloose/nerdtree'                            "a file system explorer for the Vim editor
-Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'preservim/nerdcommenter'
-
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
-Plug 'jaxbot/semantic-highlight.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'ryanoasis/vim-devicons'
 
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'                          "lightline vim
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'niklaas/lightline-gitdiff'
-Plug 'yggdroot/indentline'
 Plug 'maximbaz/lightline-ale'
+
+Plug 'yggdroot/indentline'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'majutsushi/tagbar'
 
-Plug 'scrooloose/syntastic'
-
 Plug 'OmniSharp/omnisharp-vim'
-
-Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
+Plug 'scrooloose/syntastic'
 
 "Plug 'prettier/vim-prettier'
 
 Plug 'terryma/vim-multiple-cursors'
+Plug 'dominikduda/vim_current_word'
 
 Plug 'tpope/vim-surround'
 
-Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'             "for snippets
 Plug 'epilande/vim-react-snippets'
 Plug 'SirVer/ultisnips'
+
 Plug 'jvanja/vim-bootstrap4-snippets' "for bootstrap4
 
-Plug 'valloric/matchtagalways'
+Plug 'valloric/matchtagalways'        "for html
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+
 Plug 'digitaltoad/vim-jade' "for pug
+
 Plug 'pangloss/vim-javascript' "for js
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
@@ -59,8 +55,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
-Plug 'dominikduda/vim_current_word'
-
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -68,6 +62,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 Plug 'liuchengxu/vim-which-key' "which-key
 
-Plug 'kevinhwang91/rnvimr'
+Plug 'kevinhwang91/rnvimr'          "for ranger
+Plug 'vifm/vifm.vim'
 
 call plug#end()
