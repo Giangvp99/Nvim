@@ -35,18 +35,12 @@ highlight default link WhichKeyDesc      Function
 
 " Single mappings
 "let g:which_key_map['/'] = [ ':call Comment()'                    , 'comment' ]
-let g:which_key_map['.'] = [ ':e $MYVIMRC'                        , 'open init.vim' ]
 let g:which_key_map[';'] = [ ':Commands'                          , 'commands' ]
-let g:which_key_map['='] = [ '<C-W>='                             , 'balance windows' ]
 let g:which_key_map['d'] = [ ':Bdelete'                           , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer'               , 'explorer' ]
 " let g:which_key_map['f'] = [ ':Farr'                              , 'find and replace' ]
-let g:which_key_map['h'] = [ '<C-W>s'                             , 'split below']
 let g:which_key_map['F'] = [ ':Files'                             , 'search files' ]
-let g:which_key_map['q'] = [ 'q'                                  , 'quit' ]
 let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
-let g:which_key_map['v'] = [ '<C-W>v'                             , 'split right']
-let g:which_key_map['w'] = [ 'w'                                  , 'write' ]
 let g:which_key_map[' '] = [ '<ESC>'                              , 'close' ]
 
 " Group mappings
@@ -54,8 +48,14 @@ let g:which_key_map[' '] = [ '<ESC>'                              , 'close' ]
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
-      \ 'e' : [':CocCommand explorer'    , 'explorer'],
-      \ 's' : [':nohl'                   , 'remove search highlight'],
+      \ '.' : [':e $MYVIMRC'                   , 'open init.vim'],
+      \ 's' : [':nohl'                         , 'remove search highlight'],
+      \ 'w' : ['w'                             , 'write' ],
+      \ 'h' : ['<C-W>s'                        , 'split below'],
+      \ 'v' : ['<C-W>v'                        , 'split right'],
+      \ 'q' : ['q'                             , 'quit' ],
+      \ '=' : ['<C-W>='                        , 'balance windows' ],
+      \ ' ' : ['<ESC>'                         , 'close' ],
       \ }
 
 " b is for buffer
@@ -69,6 +69,7 @@ let g:which_key_map.b = {
       \ 'n' : [':bnext'     , 'next-buffer'],
       \ 'p' : [':bprevious' , 'previous-buffer'],
       \ '?' : [':Buffers'   , 'fzf-buffer'],
+      \ ' ' : ['<ESC>'      , 'close' ],
       \ }
 
 " f is for find and replace
@@ -122,6 +123,7 @@ let g:which_key_map.s = {
       \ 'w' : [':Windows'               , 'search windows'],
       \ 'y' : [':Filetypes'             , 'file types'],
       \ 'z' : [':FZF'                   , 'FZF'],
+      \ ' ' : ['<ESC>'                  , 'close' ],
       \ }
       " \ 's' : [':Snippets'     , 'snippets'],
 
@@ -132,6 +134,7 @@ let g:which_key_map.S = {
       \ 'l' : [':SLoad'           , 'Load Session']     ,
       \ 's' : [':Startify'        , 'Start Page']     ,
       \ 'S' : [':SSave'           , 'Save Session']   ,
+      \ ' ' : ['<ESC>'            , 'close' ],
       \ }
 
 " g is for git
@@ -162,6 +165,7 @@ let g:which_key_map.g = {
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ ' ' : ['<ESC>'                             , 'close' ],
       \ }
 
 " let g:which_key_map.G = {
@@ -214,6 +218,7 @@ let g:which_key_map.l = {
       \ 'v' : [':Vista!!'                            , 'tag viewer'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
+      \ ' ' : ['<ESC>'                               , 'close' ],
       \ }
 
 " t is for terminal
@@ -225,6 +230,7 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'l' : [':FloatermNext'                                  , 'next'],
       \ 'h' : [':FloatermPrev'                                  , 'prev'],
+      \ ' ' : ['<ESC>'                                          , 'close' ],
       \ }
 
 " T is for terminal
@@ -243,6 +249,7 @@ let g:which_key_map.T = {
       \ 'p' : [':tabprevious'             , 'prev tab'],
       \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
       \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
+      \ ' ' : ['<ESC>'                    , 'close' ],
       \ }
 
 " w is for wiki
