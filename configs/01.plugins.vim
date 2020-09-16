@@ -19,6 +19,7 @@ Plug 'OmniSharp/omnisharp-vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
+Plug 'voldikss/fzf-floaterm'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
@@ -54,6 +55,8 @@ Plug 'leafgarland/typescript-vim'
 """"""""""""""""""""""""""""""""for git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
+Plug 'kdheepak/lazygit.nvim'
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -64,5 +67,9 @@ Plug 'liuchengxu/vim-which-key' "which-key
 
 Plug 'kevinhwang91/rnvimr'          "for ranger
 Plug 'vifm/vifm.vim'
+
+Plug 'voldikss/vim-floaterm'
+
+Plug 'tpope/vim-commentary'
 
 call plug#end()

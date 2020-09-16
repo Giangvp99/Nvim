@@ -19,6 +19,7 @@
 		}
 	}, 
   "snippets.ultisnips.enable": true, 
+  
   "explorer.icon.enableNerdfont": true,
   "explorer.width": 25,
   "explorer.keyMappings": {
