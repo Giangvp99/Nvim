@@ -72,9 +72,6 @@ Plug 'voldikss/vim-floaterm'
 
 Plug 'tpope/vim-commentary'
 
-<<<<<<< HEAD
 Plug 'mhinz/vim-startify'
 
-=======
->>>>>>> e9a526743ff06627cdd4986796732f53b4a55066
 call plug#end()
