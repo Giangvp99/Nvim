@@ -2,6 +2,8 @@ call plug#begin('~/.config/nvim/pluged')
 
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'itchyny/lightline.vim'                          "lightline vim

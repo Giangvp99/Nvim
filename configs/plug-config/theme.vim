@@ -4,7 +4,7 @@
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
-colorscheme gruvbox
+colorscheme dracula
 set termguicolors
 set t_Co=256
 """"""""semanticTermColors""""""""""
