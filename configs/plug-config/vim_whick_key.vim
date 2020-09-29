@@ -228,8 +228,6 @@ let g:which_key_map.t = {
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],
-      \ 'l' : [':FloatermNext'                                  , 'next'],
-      \ 'h' : [':FloatermPrev'                                  , 'prev'],
       \ ' ' : ['<ESC>'                                          , 'close' ],
       \ }
 
