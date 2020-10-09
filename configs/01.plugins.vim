@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/pluged')
 Plug 'morhetz/gruvbox'                                "themes for vim
 Plug 'crusoexia/vim-monokai'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'nightsense/snow'
 
 Plug 'ryanoasis/vim-devicons'
 
@@ -75,5 +76,12 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-commentary'
 
 Plug 'mhinz/vim-startify'
+
+Plug 'junegunn/seoul256.vim'
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
