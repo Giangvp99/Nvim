@@ -77,8 +77,6 @@ Plug 'tpope/vim-commentary'
 
 Plug 'mhinz/vim-startify'
 
-Plug 'junegunn/seoul256.vim'
-
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
