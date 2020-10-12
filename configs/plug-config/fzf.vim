@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""
 """"""""""""""""""FZF""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""
-nnoremap <C-f> :Files<CR>
+nnoremap <C-f> :FilesWithDevicons <CR>
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
 			\ 'ctrl-s': 'split',

@@ -23,6 +23,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/fzf-floaterm'
+Plug 'coreyja/fzf.devicon.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
