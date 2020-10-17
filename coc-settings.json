@@ -2,28 +2,29 @@
 	"coc.preferences.formatOnTypeFiletypes": ["css","javascript","html", "vim"],
 	"html.autoClosingTags": true,
 
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupport": true
+        }
+      }
+    }
+  },
 
-	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": ["c","cpp","cuda","objc","objcpp"],
-			"rootPatterns": [".ccls-root","compile_commands.json"],
-			"initializationOptions": {
-				"cache":{
-					"directory":".ccls-cache"
-				},
-				"client":{
-					"snippetsSupport":true
-				}
-			}
-		}
-	}, 
-  "snippets.ultisnips.enable": true, 
-  
+  "snippets.ultisnips.enable": true,
+  "diagnostic.displayByAle":true,
+
   "explorer.icon.enableNerdfont": true,
   "explorer.width": 25,
   "explorer.keyMappings": {
-    "i": false, 
+    "i": false,
 
     "gk": "expandablePrev",
     "gj": "expandableNext",

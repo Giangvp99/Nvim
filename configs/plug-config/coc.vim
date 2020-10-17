@@ -9,7 +9,9 @@ let g:coc_global_extensions = [
 			\ 'coc-json',
 			\ 'coc-css',
 			\ 'coc-html',
-      \ 'coc-explorer'
+      \ 'coc-explorer',
+      \ 'coc-git',
+      \ 'coc-tabnine',
 			\]
 
 
@@ -60,6 +62,14 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <leader>rn <Plug>(coc-rename)
 
 command! -nargs=0 Format :call CocAction('format')
+
+
+
+
+
+
+
+
 
 
 "Explorer

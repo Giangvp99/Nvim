@@ -1,86 +1,127 @@
+"Header 3 row
+"Plugins after name .....
+"comment for plug begin 49 column
+
+
 call plug#begin('~/.config/nvim/pluged')
 
-Plug 'morhetz/gruvbox'                                "themes for vim
+""""""""""""""""""""""""""""""
+""""""""""Interface"""""""""""
+""""""""""""""""""""""""""""""
+
+"""""""""Colorscheme""""""""""
+Plug 'morhetz/gruvbox'                          "themes for vim
 Plug 'crusoexia/vim-monokai'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'nightsense/snow'
 
+""""""""""Devicons""""""""""""
 Plug 'ryanoasis/vim-devicons'
 
-Plug 'itchyny/lightline.vim'                          "lightline vim
+"""""""""LightLine""""""""""""
+Plug 'itchyny/lightline.vim'                    "lightline vim
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'niklaas/lightline-gitdiff'
 Plug 'maximbaz/lightline-ale'
 
-Plug 'yggdroot/indentline'
+""""""""""Indentline""""""""""
+Plug 'yggdroot/indentline'                      "indent for vim
 
+""""""""""CursorWord""""""""""
+Plug 'terryma/vim-multiple-cursors'             "highlight multiple word
+
+""""""""""CurrentWord"""""""""
+Plug 'dominikduda/vim_current_word'             "highlight current word
+
+
+
+""""""""""""""""""""""""""""""
+"""""""""Completion"""""""""""
+""""""""""""""""""""""""""""""
+
+"""""""""""CocNvim""""""""""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'majutsushi/tagbar'
-
+""""""""""""""C#""""""""""""""
 Plug 'OmniSharp/omnisharp-vim'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
-Plug 'junegunn/fzf.vim'
-Plug 'voldikss/fzf-floaterm'
-Plug 'coreyja/fzf.devicon.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'w0rp/ale'
-Plug 'scrooloose/syntastic'
-
-"Plug 'prettier/vim-prettier'
-
-Plug 'terryma/vim-multiple-cursors'
-Plug 'dominikduda/vim_current_word'
-
-Plug 'tpope/vim-surround'
-
-Plug 'honza/vim-snippets'             "for snippets
-Plug 'epilande/vim-react-snippets'
+"""""""""Snippets"""""""""""""
+Plug 'honza/vim-snippets'                       "for basic snippets
 Plug 'SirVer/ultisnips'
 
-Plug 'jvanja/vim-bootstrap4-snippets' "for bootstrap4
+Plug 'digitaltoad/vim-jade'                     "for pug
 
-Plug 'valloric/matchtagalways'        "for html
+Plug 'valloric/matchtagalways'                  "for html
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'digitaltoad/vim-jade' "for pug
+Plug 'epilande/vim-react-snippets'              "for react
+Plug 'jvanja/vim-bootstrap4-snippets'           "for bootstrap4
 
-Plug 'pangloss/vim-javascript' "for js
+Plug 'pangloss/vim-javascript'                  "for js
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 
-Plug 'ianks/vim-tsx' "reactnative
+Plug 'ianks/vim-tsx'                            "reactnative
 Plug 'leafgarland/typescript-vim'
 
-""""""""""""""""""""""""""""""""for git
+
+
+
+""""""""""""""""""""""""""""""
+""""""""Intergration""""""""""
+""""""""""""""""""""""""""""""
+
+""""""""""FZF&CtrlP"""""""""""                  "search file and better display
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'voldikss/fzf-floaterm'
+Plug 'coreyja/fzf.devicon.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
+
+"""""""""""""ALE""""""""""""""                  "display error
+Plug 'w0rp/ale'
+
+
+""""""""""""""""""""""""""""""
+""""""""""Command"""""""""""""
+""""""""""""""""""""""""""""""
+
+
+""""""""""WhichKey""""""""""""
+Plug 'liuchengxu/vim-which-key'                 "which-key
+
+""""""""""Ranger""""""""""""""
+Plug 'kevinhwang91/rnvimr'                      "for ranger
+Plug 'vifm/vifm.vim'
+
+""""""""""Floaterm""""""""""""
+Plug 'voldikss/vim-floaterm'
+
+""""""""""""""""""""""""""""""
+""""""""Code display""""""""""
+""""""""""""""""""""""""""""""
+
+
+""""""""""Tagbar""""""""""""""
+Plug 'majutsushi/tagbar'
+
+""""""""""Comment"""""""""""""
+Plug 'tpope/vim-commentary'
+
+""""""""""""""Git"""""""""""""
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'APZelos/blamer.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+"""""""""VimSurround""""""""""
+Plug 'tpope/vim-surround'
 
-Plug 'liuchengxu/vim-which-key' "which-key
-
-Plug 'kevinhwang91/rnvimr'          "for ranger
-Plug 'vifm/vifm.vim'
-
-Plug 'voldikss/vim-floaterm'
-
-Plug 'tpope/vim-commentary'
-
+"""""""""""Startify"""""""""""
 Plug 'mhinz/vim-startify'
 
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+
 Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
