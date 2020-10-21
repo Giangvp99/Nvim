@@ -9,29 +9,30 @@ let g:lightline = {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
-      \   'left': [ [ 'mode', 'paste' ], 
-      \             [ 'readonly', 'filename', 'modified' ] ]
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified' ,'method'] ]
       \ },
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
-			\		'right': [ [ 'gitbranch', 'gitdiff' ], 
+			\		'right': [ [ 'gitbranch', 'gitdiff' ],
       \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
       \ },
       \ 'separator': {'left': "", 'right': ''},
       \ 'inactive': {
-      \   'left': [ [ 'filename', 'gitversion' ] ] 
+      \   'left': [ [ 'filename', 'gitversion' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
       \   'mode':'LightLineMode',
-			\   'filename': 'LightLineFilename', 
+			\   'filename': 'LightLineFilename',
       \   'percent' : 'LightlinePercent',
-      \   'fileformat':'LightlineFileformat', 
-      \   'filetype':'LightlineFiletype', 
-      \   'fileencoding':'LightlineFilecoding', 
-      \   'readonly':'LightlineReadOnly', 
+      \   'fileformat':'LightlineFileformat',
+      \   'filetype':'LightlineFiletype',
+      \   'fileencoding':'LightlineFilecoding',
+      \   'readonly':'LightlineReadOnly',
       \   'modified':'LightlineModified',
-      \   'lineinfo':'LightlineInfo'
+      \   'lineinfo':'LightlineInfo',
+      \   'method':'NearestMethodOrFunction'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -43,8 +44,8 @@ let g:lightline = {
       \   'linter_ok': 'lightline#ale#ok',
 			\ },
       \ 'component_type': {
-      \   'buffers': 'tabsel', 
-			\	  'gitdiff': 'middle', 
+      \   'buffers': 'tabsel',
+			\	  'gitdiff': 'middle',
       \   'linter_checking': 'right',
       \   'linter_infos': 'right',
       \   'linter_warnings': 'warning',
@@ -55,7 +56,7 @@ let g:lightline = {
 
 function! LightlineInfo()
   if &ft !=? 'coc-explorer'
-    return line('.').':'. col('.') 
+    return line('.').':'. col('.')
   else
     return ''
   endif
@@ -63,7 +64,7 @@ endfunction
 
 function! LightlinePercent()
   if &ft !=? 'coc-explorer'
-    return line('.') * 100 / line('$') . '%' 
+    return line('.') * 100 / line('$') . '%'
   else
     return ''
   endif
@@ -99,7 +100,7 @@ endfunction
 
 function! LightlineReadOnly()
   if &ft !=? 'coc-explorer'
-    return &readonly? '':'' 
+    return &readonly? '':''
   else
     return ''
   endif
@@ -107,7 +108,7 @@ endfunction
 
 function! LightlineModified()
   if &ft !=? 'coc-explorer'
-    return &modified? '✎':''  
+    return &modified? '✎':''
   else
     return ''
   endif
@@ -128,5 +129,3 @@ let g:lightline#bufferline#enable_nerdfont = 1
 let g:lightline#bufferline#filename_modifier = ':t:r'
 let g:lightline#bufferline#modified = '✎'
 let g:lightline#bufferline#read_only = ''
-
-

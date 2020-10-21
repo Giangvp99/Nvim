@@ -12,6 +12,16 @@ let g:coc_global_extensions = [
       \ 'coc-explorer',
       \ 'coc-git',
       \ 'coc-tabnine',
+      \ 'coc-stylelintplus',
+      \ 'coc-spell-checker',
+      \ 'coc-fzf-preview',
+      \ 'coc-floaterm',
+      \ 'coc-emmet',
+      \ 'coc-clangd',
+      \ 'coc-omnisharp',
+      \ 'coc-svg', 
+      \ 'coc-flow', 
+      \ 'coc-flutter',
 			\]
 
 
@@ -41,7 +51,7 @@ inoremap <silent><expr> <NUL> coc#refresh()
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-"use <cr> to confim completion
+"use <cr> to confirm completion
 if has('patch8.1.1068')
 	inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 else
@@ -69,9 +79,6 @@ command! -nargs=0 Format :call CocAction('format')
 
 
 
-
-
-
 "Explorer
 let g:coc_explorer_global_presets = {
 \   'floating': {
@@ -91,3 +98,5 @@ let g:coc_explorer_global_presets = {
 \     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
 \   }
 \ }
+
+

@@ -104,7 +104,8 @@ Plug 'voldikss/vim-floaterm'
 
 
 """"""""""Tagbar""""""""""""""
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim'
 
 """"""""""Comment"""""""""""""
 Plug 'tpope/vim-commentary'
@@ -122,6 +123,6 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-startify'
 
 
-Plug 'prabirshrestha/asyncomplete.vim'
+
 
 call plug#end()
