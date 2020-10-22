@@ -104,8 +104,7 @@ Plug 'voldikss/vim-floaterm'
 
 
 """"""""""Tagbar""""""""""""""
-"Plug 'majutsushi/tagbar'
-Plug 'liuchengxu/vista.vim'
+Plug 'majutsushi/tagbar'
 
 """"""""""Comment"""""""""""""
 Plug 'tpope/vim-commentary'

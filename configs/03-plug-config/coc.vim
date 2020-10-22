@@ -13,7 +13,6 @@ let g:coc_global_extensions = [
       \ 'coc-git',
       \ 'coc-tabnine',
       \ 'coc-stylelintplus',
-      \ 'coc-spell-checker',
       \ 'coc-fzf-preview',
       \ 'coc-floaterm',
       \ 'coc-emmet',

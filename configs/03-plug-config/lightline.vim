@@ -4,13 +4,14 @@
 set showtabline=2
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ],
+      \              [ 'tagbar' ] ],
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified' ,'method'] ]
+      \             [ 'readonly', 'filename', 'modified'] ]
       \ },
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
@@ -32,7 +33,7 @@ let g:lightline = {
       \   'readonly':'LightlineReadOnly',
       \   'modified':'LightlineModified',
       \   'lineinfo':'LightlineInfo',
-      \   'method':'NearestMethodOrFunction'
+      \   'tagbar':'TagbarCurrentTag',
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -53,6 +54,9 @@ let g:lightline = {
       \   'linter_ok': 'right',
 			\ },
       \ }
+function! TagbarCurrentTag()
+  return tagbar#currenttag('%s','')
+endfunction
 
 function! LightlineInfo()
   if &ft !=? 'coc-explorer'
@@ -129,3 +133,6 @@ let g:lightline#bufferline#enable_nerdfont = 1
 let g:lightline#bufferline#filename_modifier = ':t:r'
 let g:lightline#bufferline#modified = '✎'
 let g:lightline#bufferline#read_only = ''
+
+
+let g:lightline_tagbar#format = '%s'
