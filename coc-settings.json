@@ -6,6 +6,7 @@
   "diagnostic.displayByAle": true,
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.colorSupport": true,
 
   "explorer.icon.enableNerdfont": true,
   "explorer.width": 25,

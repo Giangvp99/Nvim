@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""
 syntax enable
 set background=dark
-highlight Normal ctermbg=None
 colorscheme dracula
 set termguicolors
+highlight Normal guibg=None ctermbg=None
 set t_Co=256

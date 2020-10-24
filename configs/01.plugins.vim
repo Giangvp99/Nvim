@@ -53,6 +53,7 @@ Plug 'digitaltoad/vim-jade'                     "for pug
 Plug 'valloric/matchtagalways'                  "for html
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'raimondi/delimitmate'
 
 Plug 'epilande/vim-react-snippets'              "for react
 Plug 'jvanja/vim-bootstrap4-snippets'           "for bootstrap4
@@ -121,7 +122,8 @@ Plug 'tpope/vim-surround'
 """""""""""Startify"""""""""""
 Plug 'mhinz/vim-startify'
 
-
+"""""""""""Rainbow""""""""""""
+Plug 'luochen1990/rainbow'
 
 
 call plug#end()
