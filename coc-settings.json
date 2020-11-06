@@ -10,7 +10,7 @@
 
   "explorer.icon.enableNerdfont": true,
   "explorer.width": 25,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "i": false,
 
     "gk": "expandablePrev",

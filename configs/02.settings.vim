@@ -35,15 +35,20 @@ set encoding=UTF-8
 
 "Shortcut keys
 inoremap jj <ESC>
-tnoremap <ESC> <C-\><C-n>
-
 
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP> 
 inoremap <Right> <NOP>
 
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
 
+tnoremap <ESC> <C-\><C-n>
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
