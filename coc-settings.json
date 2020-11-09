@@ -3,6 +3,9 @@
   "html.autoClosingTags": true,
 
   "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories": [
+    "UltiSnips"
+  ],
   "diagnostic.displayByAle": true,
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,

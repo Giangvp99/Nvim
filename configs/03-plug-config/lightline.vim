@@ -11,7 +11,7 @@ let g:lightline = {
       \              [ 'fileformat', 'fileencoding', 'filetype' ],
       \              [ 'tagbar' ] ],
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified'] ]
+      \             [ 'cocstatus','readonly', 'filename', 'modified'] ]
       \ },
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
@@ -34,6 +34,7 @@ let g:lightline = {
       \   'modified':'LightlineModified',
       \   'lineinfo':'LightlineInfo',
       \   'tagbar':'TagbarCurrentTag',
+      \   'cocstatus':'coc#status',
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -136,3 +137,5 @@ let g:lightline#bufferline#read_only = ''
 
 
 let g:lightline_tagbar#format = '%s'
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
