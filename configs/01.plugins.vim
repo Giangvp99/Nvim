@@ -80,9 +80,9 @@ Plug 'voldikss/fzf-floaterm'
 Plug 'coreyja/fzf.devicon.vim'
 ""Plug 'ctrlpvim/ctrlp.vim'
 
-""""""""""""""ALE""""""""""""""                  "display error
+""""""""Syntastic/ALE""""""""""                  "display error
 Plug 'w0rp/ale'
-
+"Plug 'scrooloose/syntastic'
 
 """""""""""""""""""""""""""""""
 """""""""""Command"""""""""""""
