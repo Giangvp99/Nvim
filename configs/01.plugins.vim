@@ -49,7 +49,7 @@ Plug 'OmniSharp/omnisharp-vim'
 "Plug 'honza/vim-snippets'                       "for basic snippets
 Plug 'SirVer/ultisnips'
 
-"Plug 'digitaltoad/vim-jade'                     "for pug
+Plug 'digitaltoad/vim-jade'                     "for pug
 
 Plug 'valloric/matchtagalways'                  "for html
 Plug 'mattn/emmet-vim'
