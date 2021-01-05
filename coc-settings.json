@@ -8,7 +8,8 @@
     "~/.config/nvim/pluged/ultisnips"
   ],
   "diagnostic.displayByAle": true,
-  "eslint.enable": true,
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": true,
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.colorSupport": true,

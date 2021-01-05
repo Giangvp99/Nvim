@@ -113,7 +113,7 @@ Plug 'tpope/vim-commentary'
 """""""""""""""Git"""""""""""""
 "Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'APZelos/blamer.nvim'
+"Plug 'APZelos/blamer.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
 """"""""""VimSurround""""""""""
