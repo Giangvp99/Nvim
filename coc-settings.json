@@ -4,9 +4,11 @@
 
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.directories": [
-    "UltiSnips"
+    "UltiSnips", 
+    "~/.config/nvim/pluged/ultisnips"
   ],
   "diagnostic.displayByAle": true,
+  "eslint.enable": true,
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.colorSupport": true,

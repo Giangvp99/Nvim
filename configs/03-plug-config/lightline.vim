@@ -16,7 +16,7 @@ let g:lightline = {
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
 			\		'right': [ [ 'gitbranch', 'gitdiff' ],
-      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ]
+      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ]]
       \ },
       \ 'separator': {'left': "", 'right': ''},
       \ 'inactive': {
@@ -33,7 +33,7 @@ let g:lightline = {
       \   'readonly':'LightlineReadOnly',
       \   'modified':'LightlineModified',
       \   'lineinfo':'LightlineInfo',
-      \   'tagbar':'TagbarCurrentTag',
+      \   'tagbar' : 'TagbarCurrentTag',
       \   'cocstatus':'coc#status',
       \ },
       \ 'component_expand': {

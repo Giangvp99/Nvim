@@ -1,11 +1,11 @@
-"""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""Ale'""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""
+""""""""""""""""Ale'""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""
+let g:ale_fix_on_save = 1
 let b:ale_fixers = ['prettier', 'eslint']
 
-let g:ale_fix_on_save = 1
 
-let b:ale_linters = ['flow-language-server']
+"let b:ale_linters = ['flow-language-server']
 let g:ale_linters = {
 \   'javascript': ['flow-language-server'],
 \}

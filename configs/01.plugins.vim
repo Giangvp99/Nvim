@@ -15,7 +15,7 @@ call plug#begin('~/.config/nvim/pluged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 """""""""""Devicons""""""""""""
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 """"""""""LightLine""""""""""""
 Plug 'itchyny/lightline.vim'                    "lightline vim
@@ -26,13 +26,12 @@ Plug 'maximbaz/lightline-ale'
 """""""""""Indentline""""""""""
 Plug 'yggdroot/indentline'                      "indent for vim
 
-"""""""""""CursorWord""""""""""
-"Plug 'terryma/vim-multiple-cursors'             "highlight multiple word
+""""""""""CursorWord""""""""""
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 """""""""""CurrentWord"""""""""
-Plug 'dominikduda/vim_current_word'             "highlight current word
-
+"Plug 'dominikduda/vim_current_word'             "highlight current word 
+"no need beacause using coc nvim
 
 
 """""""""""""""""""""""""""""""
@@ -42,7 +41,7 @@ Plug 'dominikduda/vim_current_word'             "highlight current word
 """"""""""""CocNvim""""""""""""
 Plug 'neoclide/coc.nvim'
 
-"""""""""""""""C#""""""""""""""
+""""""""""""""C#""""""""""""""
 Plug 'OmniSharp/omnisharp-vim'
 
 """"""""""Snippets"""""""""""""
@@ -54,17 +53,18 @@ Plug 'digitaltoad/vim-jade'                     "for pug
 Plug 'valloric/matchtagalways'                  "for html
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'raimondi/delimitmate'
 
 Plug 'jvanja/vim-bootstrap4-snippets'           "for bootstrap4
 
 Plug 'pangloss/vim-javascript'                  "for js
+Plug 'jelera/vim-javascript-syntax'
+Plug 'maksimr/vim-jsbeautify'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 
-Plug 'ianks/vim-tsx'                            "reactnative
-Plug 'leafgarland/typescript-vim'
+"Plug 'ianks/vim-tsx'                            "reactnative
+"Plug 'leafgarland/typescript-vim'
 
 
 
@@ -78,7 +78,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/fzf-floaterm'
 Plug 'coreyja/fzf.devicon.vim'
-""Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 
 """"""""Syntastic/ALE""""""""""                  "display error
 Plug 'w0rp/ale'
@@ -111,7 +111,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 
 """""""""""""""Git"""""""""""""
-Plug 'mhinz/vim-signify'
+"Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'APZelos/blamer.nvim'
 Plug 'kdheepak/lazygit.nvim'
