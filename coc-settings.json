@@ -10,6 +10,7 @@
   "diagnostic.displayByAle": true,
   "git.addGBlameToBufferVar": true,
   "git.addGBlameToVirtualText": true,
+  "git.virtualTextPrefix": "   -->   ",
 
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.colorSupport": true,
