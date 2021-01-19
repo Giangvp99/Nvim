@@ -23,6 +23,9 @@ let g:rnvimr_enable_bw = 1
 let g:rnvimr_ranger_cmd = 'ranger --cmd="set column_ratios 1,1"
             \ --cmd="set draw_borders both"'
 
+" Add a shadow window, value is equal to 100 will disable shadow
+let g:rnvimr_shadow_winblend = 75
+
 " Link CursorLine into RnvimrNormal highlight in the Floating window
 highlight link RnvimrNormal CursorLine
 
@@ -46,12 +49,18 @@ let g:rnvimr_action = {
             \ 'yw': 'EmitRangerCwd'
             \ }
 
+ let g:rnvimr_ranger_views = [
+             \ {'minwidth': 90, 'ratio': [1,1]},
+             \ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
+             \ {'maxwidth': 49, 'ratio': [1]}
+             \ ]
+
 " Customize the initial layout
 let g:rnvimr_layout = { 'relative': 'editor',
-            \ 'width': float2nr(round(0.6 * &columns)),
-            \ 'height': float2nr(round(0.6 * &lines)),
-            \ 'col': float2nr(round(0.2 * &columns)),
-            \ 'row': float2nr(round(0.2 * &lines)),
+            \ 'width': float2nr(round(0.7 * &columns)),
+            \ 'height': float2nr(round(0.7 * &lines)),
+            \ 'col': float2nr(round(0.15 * &columns)),
+            \ 'row': float2nr(round(0.15 * &lines)),
             \ 'style': 'minimal' }
 
 " Customize multiple preset layouts
@@ -73,4 +82,6 @@ let g:rnvimr_presets = [
 " Only use initial preset layout
 " let g:rnvimr_presets = [{}]
 
-
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler

@@ -7,7 +7,7 @@ let b:ale_fixers = ['prettier', 'eslint']
 
 "let b:ale_linters = ['flow-language-server']
 let g:ale_linters = {
-\   'javascript': ['flow-language-server'],
+\   'javascript': ['eslint','flow-language-server'],
 \}
 
 let g:ale_completion_autoimport = 1

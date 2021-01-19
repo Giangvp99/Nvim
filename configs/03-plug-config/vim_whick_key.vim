@@ -19,7 +19,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map = {}
 
 " Define a separator
-let g:which_key_sep = '→'
+let g:which_key_sep = '->'
 
 " Coc Search & refactor
 "nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
@@ -42,6 +42,7 @@ let g:which_key_map['r'] = [ ':RnvimrToggle'                      , 'ranger' ]
 let g:which_key_map['g'] = [ ':FloatermNew lazygit'               , 'git']
 let g:which_key_map[' '] = [ '<ESC>'                              , 'close' ]
 let g:which_key_map['m'] = [ ':TagbarToggle'                      , 'tagbar' ]
+let g:which_key_map['n'] = [ ':FloatermNew lazynpm'               , 'npm' ]
 
 " Group mappings
 

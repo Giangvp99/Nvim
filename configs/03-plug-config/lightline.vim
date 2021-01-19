@@ -4,7 +4,7 @@
 set showtabline=2
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'xcodedark',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],

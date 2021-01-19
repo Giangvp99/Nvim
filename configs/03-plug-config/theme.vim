@@ -2,8 +2,10 @@
 """""""""""""""""Theme"""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""
 syntax enable
-set background=dark
-colorscheme dracula
 set termguicolors
+colorscheme xcodedark
+"set background=dark
 highlight Normal guibg=None ctermbg=None
 set t_Co=256
+let g:miramare_enable_italic = 1
+let g:miramare_disable_italic_comment = 1
