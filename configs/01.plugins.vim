@@ -15,7 +15,7 @@ call plug#begin('~/.config/nvim/pluged')
 "Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'arzg/vim-colors-xcode'
+Plug 'drewtempelmeyer/palenight.vim'
 
 """""""""""Devicons""""""""""""
 Plug 'ryanoasis/vim-devicons'
