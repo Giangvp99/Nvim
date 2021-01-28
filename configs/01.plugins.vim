@@ -46,6 +46,7 @@ Plug 'neoclide/coc.nvim'
 
 """"""""""""""C#""""""""""""""
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'jlcrochet/vim-razor'
 
 """"""""""Snippets"""""""""""""
 Plug 'honza/vim-snippets'                       "for basic snippets
