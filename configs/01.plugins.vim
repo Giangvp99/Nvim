@@ -10,11 +10,6 @@ call plug#begin('~/.config/nvim/pluged')
 """"""""""""""""""""""""""""""
 
 """"""""""Colorscheme""""""""""
-"Plug 'morhetz/gruvbox'                          "themes for vim
-"Plug 'crusoexia/vim-monokai'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 
 """""""""""Devicons""""""""""""
@@ -46,7 +41,6 @@ Plug 'neoclide/coc.nvim'
 
 """"""""""""""C#""""""""""""""
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'jlcrochet/vim-razor'
 
 """"""""""Snippets"""""""""""""
 Plug 'honza/vim-snippets'                       "for basic snippets

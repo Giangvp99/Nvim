@@ -79,6 +79,7 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd ColorScheme * highlight CocHighlightText     ctermfg=LightMagenta    guifg=LightMagenta
 
 " Symbol renaming.
 "nmap <leader>rn <Plug>(coc-rename)
