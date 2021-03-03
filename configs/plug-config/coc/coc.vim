@@ -1,30 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""
 """"""""""""""""Coc.nvim""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""
-let g:coc_global_extensions = [
-			\ 'coc-snippets',
-			\ 'coc-tsserver',
-			\ 'coc-eslint',
-			\ 'coc-prettier',
-			\ 'coc-json',
-			\ 'coc-css',
-			\ 'coc-html',
-      \ 'coc-explorer',
-      \ 'coc-git',
-      \ 'coc-tabnine',
-      \ 'coc-stylelintplus',
-      \ 'coc-fzf-preview',
-      \ 'coc-floaterm',
-      \ 'coc-emmet',
-      \ 'coc-clangd',
-      \ 'coc-omnisharp',
-      \ 'coc-svg', 
-      \ 'coc-flow', 
-      \ 'coc-flutter',
-      \ 'coc-highlight',
-			\]
-
-
 
 " if hidden is not set, TextEdit might fail.
 set hidden

@@ -11,7 +11,7 @@ let g:rnvimr_enable_ex = 1
 let g:rnvimr_enable_picker = 1
 
 " Disable a border for floating window
-let g:rnvimr_draw_border = 1
+let g:rnvimr_draw_border = 0
 
 " Change the border's color
 let g:rnvimr_border_attr = {'fg': 14, 'bg': -1}
@@ -24,7 +24,10 @@ let g:rnvimr_ranger_cmd = 'ranger --cmd="set column_ratios 1,1"
             \ --cmd="set draw_borders both"'
 
 " Add a shadow window, value is equal to 100 will disable shadow
-let g:rnvimr_shadow_winblend = 75
+let g:rnvimr_shadow_winblend = 70
+
+" Draw border with both
+let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
 
 " Link CursorLine into RnvimrNormal highlight in the Floating window
 highlight link RnvimrNormal CursorLine
@@ -49,7 +52,7 @@ let g:rnvimr_action = {
             \ 'yw': 'EmitRangerCwd'
             \ }
 
- let g:rnvimr_ranger_views = [
+let g:rnvimr_ranger_views = [
              \ {'minwidth': 90, 'ratio': [1,1]},
              \ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
              \ {'maxwidth': 49, 'ratio': [1]}

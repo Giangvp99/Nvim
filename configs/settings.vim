@@ -1,3 +1,6 @@
+set langmenu=en_US
+let $LANG = 'en_US'
+
 let g:mapleader = "\<Space>"
 
 filetype plugin indent on
@@ -71,5 +74,13 @@ nnoremap <Right> <C-w><
 nnoremap <Left> <C-w>>
 nnoremap <Up> <C-w>-
 nnoremap <Down> <C-w>+
+
+augroup auto_spellcheck
+  autocmd BufNewFile,BufRead *.md setlocal spell
+augroup END
+
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
 
 ""done

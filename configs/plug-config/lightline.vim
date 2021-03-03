@@ -4,19 +4,20 @@
 set showtabline=2
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ],
       \              [ 'tagbar' ] ],
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus','readonly', 'filename', 'modified'] ]
+      \             [ 'cocstatus','readonly', 'filename', 'modified'],
+      \             [ 'gitdiff' ], 
+      \             [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos' ] ]
       \ },
 		  \ 'tabline': {
       \		'left': [ [ 'buffers' ] ],
-			\		'right': [ [ 'gitbranch', 'gitdiff' ],
-      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ]]
+			\		'right': [ ['gitbranch']]
       \ },
       \ 'separator': {'left': "", 'right': ''},
       \ 'inactive': {
@@ -43,16 +44,15 @@ let g:lightline = {
       \   'linter_infos': 'lightline#ale#infos',
       \   'linter_warnings': 'lightline#ale#warnings',
       \   'linter_errors': 'lightline#ale#errors',
-      \   'linter_ok': 'lightline#ale#ok',
 			\ },
       \ 'component_type': {
       \   'buffers': 'tabsel',
-			\	  'gitdiff': 'middle',
+      \   'gitbranch':'right', 
+			\	  'gitdiff': 'tabsel',
       \   'linter_checking': 'right',
       \   'linter_infos': 'right',
       \   'linter_warnings': 'warning',
       \   'linter_errors': 'error',
-      \   'linter_ok': 'right',
 			\ },
       \ }
 function! TagbarCurrentTag()
@@ -127,7 +127,6 @@ let g:lightline#ale#indicator_checking = "checking..."
 let g:lightline#ale#indicator_infos = "\uf129 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
-let g:lightline#ale#indicator_ok = "\uf00c "
 let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#enable_nerdfont = 1
