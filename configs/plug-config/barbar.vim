@@ -14,34 +14,26 @@ let bufferline.icons = v:true
 "      if you have many tabs open
 let bufferline.clickable = v:true
 
-" Configure icons on the bufferline.
-let bufferline.icon_separator_active = ''
-let bufferline.icon_separator_inactive = '▎'
-let bufferline.icon_close_tab = ''
-let bufferline.icon_close_tab_modified = '●'
-
 " If set, the letters for each buffer in buffer-pick mode will be
 " assigned based on their name. Otherwise or in case all letters are
 " already assigned, the behavior is to assign letters in order of
 " usability (see order below)
 let bufferline.semantic_letters = v:true
 
-let bufferline.maximum_padding = 2
 " New buffer letters are assigned in this order. This order is
 " optimal for the qwerty keyboard layout but might need adjustement
 " for other layouts.
 let bufferline.letters = 
   \ 'asdfjkl;ghnmxcbziowerutyqpASDFJKLGHNMXCBZIOWERUTYQP'
 
-
 let bg_current = get(nvim_get_hl_by_name('Normal',     1), 'background', '#000000')
 let bg_visible = get(nvim_get_hl_by_name('TabLineSel', 1), 'background', '#000000')
 let bg_inactive = get(nvim_get_hl_by_name('TabLine',   1), 'background', '#000000')
 
 " For the current active buffer
-hi default link BufferCurrent      Special
+hi default link BufferCurrent      Normal
 " For the current active buffer when modified
-hi default link BufferCurrentMod   WarningMsg
+hi default link BufferCurrentMod   Normal
 " For the current active buffer icon
 hi default link BufferCurrentSign  Normal
 " For the current active buffer target when buffer-picking
@@ -62,4 +54,3 @@ exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
 
 " For the shadow in buffer-picking mode
 hi default BufferShadow guifg=#000000 guibg=#000000
-

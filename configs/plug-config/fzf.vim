@@ -1,18 +1,30 @@
-"""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""FZF""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""
-nnoremap <C-f> :FilesWithDevicons <CR>
+" This is the default extra key bindings
 let g:fzf_action = {
-			\ 'ctrl-t': 'tab split',
-			\ 'ctrl-s': 'split',
-			\ 'ctrl-v': 'vsplit'
-			\ }
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_buffers_jump = 1
+
+" map <C-f> :Files<CR>
+" map <leader>b :Buffers<CR>
+" nnoremap <leader>g :Rg<CR>
+" nnoremap <leader>t :Tags<CR>
+" nnoremap <leader>m :Marks<CR>
+
+
+let g:fzf_tags_command = 'ctags -R'
 " Border color
-"let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info'
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore-vcs --glob "!{node_modules,.git}"'
+let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
+"-g '!{node_modules,.git}'
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -30,36 +42,17 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-function! CreateCenteredFloatingWindow()
-    let width = min([&columns - 4, max([80, &columns - 20])])
-    let height = min([&lines - 4, max([20, &lines - 10])])
-    let top = ((&lines - height) / 2) - 1
-    let left = (&columns - width) / 2
-    let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
-
-    let top = "╭" . repeat("─", width - 2) . "╮"
-    let mid = "│" . repeat(" ", width - 2) . "│"
-    let bot = "╰" . repeat("─", width - 2) . "╯"
-    let lines = [top] + repeat([mid], height - 2) + [bot]
-    let s:buf = nvim_create_buf(v:false, v:true)
-    call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
-    call nvim_open_win(s:buf, v:true, opts)
-    set winhl=Normal:Floating
-    let opts.row += 1
-    let opts.height -= 2
-   let opts.col += 2
-    let opts.width -= 4
-    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-    au BufWipeout <buffer> exe 'bw '.s:buf
-endfunction
-
-let g:fzf_layout = { 'window': 'call CreateCenteredFloatingWindow()' }
-
 "Get Files
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--inline-info']}), <bang>0)
 
-" Make Ripgrep ONLY search file contents and not filenames
+
+" Get text in files with Rg
+" command! -bang -nargs=* Rg
+"   \ call fzf#vim#grep(
+"   \   "rg --column --line-number --no-heading --color=always --smart-case --glob '!.git/**' ".shellescape(<q-args>), 1,
+
+ " Make Ripgrep ONLY search file contents and not filenames
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --hidden --smart-case --no-heading --color=always '.shellescape(<q-args>), 1,

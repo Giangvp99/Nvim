@@ -1,6 +1,17 @@
-" Configuration example
-nnoremap   <silent>   ~   :FloatermToggle<CR>
-tnoremap   <silent>   ~   <C-\><C-n>:FloatermToggle<CR>
-tnoremap   <silent>   >   <C-\><C-n>:FloatermNext<CR>
-tnoremap   <silent>   <   <C-\><C-n>:FloatermPrev<CR>
-tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermKill<CR>
+
+" let g:floaterm_wintype='normal'
+" let g:floaterm_height=6
+
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_next   = '<F2>'
+let g:floaterm_keymap_prev   = '<F3>'
+let g:floaterm_keymap_new    = '<F4>'
+let g:floaterm_title=''
+
+" Floaterm
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.7
+let g:floaterm_height=0.7
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
