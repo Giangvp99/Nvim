@@ -275,27 +275,27 @@ local colors = {
   fg2 = '#d5c4a1',
   fg3 = '#bdae93',
   fg4 = '#a89984',
-  bright_red = '#fb4934',
-  bright_green = '#b8bb26',
-  bright_yellow = '#fabd2f',
-  bright_blue = '#83a598',
-  bright_purple = '#d3869b',
-  bright_aqua = '#8ec07c',
-  bright_orange = '#fe8019',
-  neutral_red = '#cc241d',
-  neutral_green = '#98971a',
-  neutral_yellow = '#d79921',
-  neutral_blue = '#458588',
-  neutral_purple = '#b16286',
-  neutral_aqua = '#689d6a',
-  neutral_orange = '#d65d0e',
-  faded_red = '#9d0006',
-  faded_green = '#79740e',
-  faded_yellow = '#b57614',
-  faded_blue = '#076678',
-  faded_purple = '#8f3f71',
-  faded_aqua = '#427b58',
-  faded_orange = '#af3a03',
+  -- bright_red = '#fb4934',
+  -- bright_green = '#b8bb26',
+  -- bright_yellow = '#fabd2f',
+  -- bright_blue = '#83a598',
+  -- bright_purple = '#d3869b',
+  -- bright_aqua = '#8ec07c',
+  -- bright_orange = '#fe8019',
+  -- neutral_red = '#cc241d',
+  -- neutral_green = '#98971a',
+  -- neutral_yellow = '#d79921',
+  -- neutral_blue = '#458588',
+  -- neutral_purple = '#b16286',
+  -- neutral_aqua = '#689d6a',
+  -- neutral_orange = '#d65d0e',
+  -- faded_red = '#9d0006',
+  -- faded_green = '#79740e',
+  -- faded_yellow = '#b57614',
+  -- faded_blue = '#076678',
+  -- faded_purple = '#8f3f71',
+  -- faded_aqua = '#427b58',
+  -- faded_orange = '#af3a03',
   yellow = '#fabd2f',
   cyan = '#008080',
   darkblue = '#081633',
@@ -311,16 +311,16 @@ local colors = {
 local mode_map = {
   ['n'] = {'NORMAL', colors.fg3, colors.bg2},
   -- ['n'] = {'NORMAL', colors.bright_green, colors.faded_green},
-  ['i'] = {'INSERT', colors.bright_blue, colors.faded_blue},
-  ['R'] = {'REPLACE', colors.bright_red, colors.faded_red},
-  ['v'] = {'VISUAL', colors.bright_orange, colors.faded_orange},
-  ['V'] = {'V-LINE', colors.bright_orange, colors.faded_orange},
-  ['c'] = {'COMMAND', colors.bright_yellow, colors.faded_yellow},
-  ['s'] = {'SELECT', colors.bright_orange, colors.faded_orange},
-  ['S'] = {'S-LINE', colors.bright_orange, colors.faded_orange},
-  ['t'] = {'TERMINAL', colors.bright_aqua, colors.faded_aqua},
-  [''] = {'V-BLOCK', colors.bright_orange, colors.faded_orange},
-  [''] = {'S-BLOCK', colors.bright_orange, colors.faded_orange},
+  ['i'] = {'INSERT', colors.blue, colors.bg2},
+  ['R'] = {'REPLACE', colors.red, colors.bg2},
+  ['v'] = {'VISUAL', colors.yellow, colors.bg2},
+  ['V'] = {'V-LINE', colors.yellow, colors.bg2},
+  ['c'] = {'COMMAND', colors.orange, colors.bg2},
+  ['s'] = {'SELECT', colors.green, colors.bg2},
+  ['S'] = {'S-LINE', colors.green, colors.bg2},
+  ['t'] = {'TERMINAL', colors.cyan, colors.bg2},
+  [''] = {'V-BLOCK', colors.magenta, colors.bg2},
+  [''] = {'S-BLOCK', colors.magenta, colors.bg2},
   ['Rv'] = {'VIRTUAL'},
   ['rm'] = {'--MORE'},
 }
@@ -387,9 +387,9 @@ gls.left[1] = {
       highlight('GalaxyViModeInv', fg, nested_fg,'bold')
       highlight('GalaxyViModeNested', colors.fg2, nested_fg,'bold')
       highlight('GalaxyViModeInvNested', nested_fg, colors.bg1,'bold')
-      highlight('DiffAdd', colors.bright_green, colors.bg1)
-      highlight('DiffChange', colors.bright_orange, colors.bg1)
-      highlight('DiffDelete', colors.bright_red, colors.bg1)
+      highlight('DiffAdd', colors.green, colors.bg1)
+      highlight('DiffChange', colors.yellow, colors.bg1)
+      highlight('DiffDelete', colors.red, colors.bg1)
       return '  Giangvp99 '
     end,
     separator = sep.left_filled,
@@ -612,9 +612,9 @@ gls.short_line_left[1] = {
   BufferType = {
     provider = function ()
       local label, fg, nested_fg = unpack(mode_hl())
-      highlight('GalaxyViMode', colors.bg1, fg)
-      highlight('GalaxyViModeInv', fg, nested_fg)
-      highlight('GalaxyViModeInvNested', nested_fg, colors.bg1)
+      highlight('GalaxyViMode', colors.bg1, colors.fg2)
+      highlight('GalaxyViModeInv', colors.fg2, colors.bg1)
+      highlight('GalaxyViModeInvNested', colors.fg2, colors.bg1)
       local name = short_map[vim.bo.filetype] or 'Editor'
       return string.format('  %s ', name)
     end,
@@ -624,21 +624,21 @@ gls.short_line_left[1] = {
     separator_highlight = 'GalaxyViModeInv',
   }
 }
-gls.short_line_left[2] = {
-  ShortLeftSepNested = {
-    provider = function() return sep.left_filled end,
-    highlight = 'GalaxyViModeInvNested',
-  }
-}
-gls.short_line_right[1] = {
-  ShortRightSepNested = {
-    provider = function() return sep.right_filled end,
-    highlight = 'GalaxyViModeInvNested',
-  }
-}
-gls.short_line_right[2] = {
-  ShortRightSep = {
-    provider = function() return sep.right_filled end,
-    highlight = 'GalaxyViModeInv',
-  }
-}
+-- gls.short_line_left[2] = {
+--   ShortLeftSepNested = {
+--     provider = function() return sep.left_filled end,
+--     highlight = 'GalaxyViModeInvNested',
+--   }
+-- }
+-- gls.short_line_right[1] = {
+--   ShortRightSepNested = {
+--     provider = function() return sep.right_filled end,
+--     highlight = 'GalaxyViModeInvNested',
+--   }
+-- }
+-- gls.short_line_right[2] = {
+--   ShortRightSep = {
+--     provider = function() return sep.right_filled end,
+--     highlight = 'GalaxyViModeInv',
+--   }
+-- }
